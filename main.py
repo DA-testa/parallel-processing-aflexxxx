@@ -17,10 +17,10 @@ def parallel_processing(n, m, data):
             if start_time < min_start_time:
                 min_start_time = start_time
                 min_thread_index = thread_index
+                
+        output.append((min_thread_index, min_start_time))
 
-    output.append((min_thread_index, min_start_time))
-
-    threads[min_thread_index] = (min_start_time + time, min_thread_index)
+        threads[min_thread_index] = (min_start_time + time, min_thread_index)
 
     return output
 
